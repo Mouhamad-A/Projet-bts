@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="fr">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Monitoring des Liens</title>
+    <link rel="stylesheet" href="CSS.css">
+    <link rel="stylesheet" href="https://unpkg.com/leaflet@1.7.1/dist/leaflet.css" />
+    <script src="https://unpkg.com/leaflet@1.7.1/dist/leaflet.js"></script>
+    <script src="Script.js"></script>
+</head>
+
+<body>
+    <!-- Barre latérale -->
+    <div class="sidebar">
+        <h1>🔍 Monitoring</h1>
+        <nav>
+            <ul>
+                <li><a href="#main-content">📊 Tableau de bord</a></li>
+                <li><a href="#map">🗺️ Carte interactive</a></li>
+                <li><a href="#alerts">🚨 Alertes</a></li>
+            </ul>
+        </nav>
+    </div>
+
+    <!-- Contenu principal -->
+    <div class="main-content">
+        <h2 id="main-content">État des liens d'accès</h2>
+
+        <!-- Résumé des statuts -->
+        <div class="status-summary">
+            <div class="status-box connected">
+                <h3>0</h3>
+                <p>Connectés</p>
+            </div>
+            <div class="status-box disconnected">
+                <h3>0</h3>
+                <p>Déconnectés</p>
+            </div>
+            <div class="status-box unstable">
+                <h3>0</h3>
+                <p>Instables</p>
+            </div>
+        </div>
+
+        <!-- Tableau de bord -->
+        <h2 id="dashboard">Sites clients</h2>
+        <div class="dashboard">
+            <div class="loading-message">Chargement des données en cours...</div>
+        </div>
+
+        <!-- Carte Interactive -->
+        <h2 id="map">Cartographie interactive</h2>
+        <div id="mapContainer" class="map-container"></div>
+
+        <!-- Notifications d'alerte -->
+        <h2 id="alerts">Alertes</h2>
+        <div class="alerts">
+     <div class="loading-message">Chargement des alertes en cours...</div>
+        </div>
+
+        <!-- Ajout d'un indicateur de dernière mise à jour -->
+        <div class="last-update">
+            Dernière mise à jour: <span id="updateTime">en cours...</span>
+        </div>
+    </div>
+</body>
+</html>
